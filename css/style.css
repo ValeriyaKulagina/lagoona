@@ -173,7 +173,7 @@ body {
   color: var(--color-focus);
 }
 
-.header-phone:hover {
+.header-phone:hover:not(:focus-visible) {
   color: var(--color-focus);
 }
 
@@ -196,7 +196,7 @@ body {
   outline: 1px solid var(--color-focus);
 }
 
-.header-personal-account:hover {
+.header-personal-account:hover:not(:focus-visible) {
   color: var(--color-hover);
 }
 
@@ -205,7 +205,7 @@ body {
   transition: fill 0.3s ease-in-out;
 }
 
-.header-personal-account:hover svg {
+.header-personal-account:hover:not(:focus-visible) svg {
   fill: var(--color-hover);
 }
 
@@ -249,7 +249,7 @@ body {
   color: var(--color-focus);
 }
 
-.header-link:hover {
+.header-link:hover:not(:focus-visible) {
   color: var(--color-focus);
 }
 
@@ -362,7 +362,7 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 
-.special-item-link:hover svg {
+.special-item-link:hover:not(:focus-visible) svg {
   transform: translateX(11px);
 }
 
@@ -478,13 +478,13 @@ body {
   transition: transform 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
 
-.services-item-link:hover svg {
+.services-item-link:hover:not(:focus-visible) svg {
   fill: transparent;
   stroke: var(--color-hover);
   transform: translateX(11px);
 }
 
-.services-item-link:hover {
+.services-item-link:hover:not(:focus-visible) {
   color: var(--color-hover);
 }
 
@@ -664,7 +664,7 @@ body {
   outline: none;
 }
 
-.placement-last-card .placement-link:hover svg {
+.placement-last-card .placement-link:hover:not(:focus-visible) svg {
   transform: translateX(11px);
 }
 
@@ -807,7 +807,7 @@ body {
   outline: 1px solid var(--color-focus);
 }
 
-.contacts-link:hover {
+.contacts-link:hover:not(:focus-visible) {
   color: var(--color-hover);
 }
 
@@ -897,7 +897,7 @@ body {
   outline: 1px solid var(--color-focus);
 }
 
-.footer-link:hover {
+.footer-link:hover:not(:focus-visible) {
   color: var(--color-hover);
 }
 
@@ -931,7 +931,7 @@ body {
   outline: none;
 }
 
-.footer-social-link:hover svg, .footer-social-link:focus-visible svg {
+.footer-social-link:hover:not(:focus-visible) svg, .footer-social-link:focus-visible svg {
   fill: var(--color-focus);
   stroke: transparent;
 }
