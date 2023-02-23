@@ -96,13 +96,13 @@ body {
     border-color 0.3s ease-in-out;
 }
 
-.btn:focus, .btn:hover {
+.btn:focus-visible, .btn:hover:not(:focus-visible) {
   outline: none;
   color: #fff;
   background-color: var(--color-focus);
 }
 
-.btn:active {
+.btn:active:not(:focus-visible) {
   color: #fff;
   background-color: var(--color-active);
   border-color: var(--color-active);
@@ -177,7 +177,7 @@ body {
   color: var(--color-focus);
 }
 
-.header-phone:active {
+.header-phone:active:not(:focus-visible) {
   color: var(--color-active);
 }
 
@@ -209,11 +209,11 @@ body {
   fill: var(--color-hover);
 }
 
-.header-personal-account:active {
+.header-personal-account:active:not(:focus-visible) {
   color: var(--color-active)
 }
 
-.header-personal-account:active svg {
+.header-personal-account:active:not(:focus-visible) svg {
   fill: var(--color-active);
 }
 
@@ -253,7 +253,7 @@ body {
   color: var(--color-focus);
 }
 
-.header-link:active {
+.header-link:active:not(:focus-visible) {
   color: var(--color-active);
 }
 
@@ -362,10 +362,6 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 
-.special-item-link:hover:not(:focus-visible) svg {
-  transform: translateX(11px);
-}
-
 .special-item-link:focus-visible {
   outline: none;
 }
@@ -374,7 +370,11 @@ body {
   opacity: 1;
 }
 
-.special-item-link:active {
+.special-item-link:hover:not(:focus-visible) svg {
+  transform: translateX(11px);
+}
+
+.special-item-link:active:not(:focus-visible) {
   color: #fff;
 }
 
@@ -448,7 +448,13 @@ body {
   font-size: 20px;
   line-height: 200%;
   color: #cc9933;
-  transition: color 0.3s ease-in-out,
+  transition: color 0.3s ease-in-out;
+}
+
+.services-item-link svg {
+  fill: transparent;
+  stroke: var(--color-focus);
+  transition: transform 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
 
 .services-item-link::before {
@@ -472,10 +478,8 @@ body {
   opacity: 1;
 }
 
-.services-item-link svg {
-  fill: transparent;
-  stroke: var(--color-focus);
-  transition: transform 0.3s ease-in-out, stroke 0.3s ease-in-out;
+.services-item-link:hover:not(:focus-visible) {
+  color: var(--color-hover);
 }
 
 .services-item-link:hover:not(:focus-visible) svg {
@@ -484,16 +488,12 @@ body {
   transform: translateX(11px);
 }
 
-.services-item-link:hover:not(:focus-visible) {
-  color: var(--color-hover);
-}
-
-.services-item-link:active svg {
+.services-item-link:active:not(:focus-visible) svg {
   fill: transparent;
   stroke: var(--color-active);
 }
 
-.services-item-link:active {
+.services-item-link:active:not(:focus-visible) {
   color: var(--color-active);
 }
 
@@ -664,7 +664,7 @@ body {
   outline: none;
 }
 
-.placement-last-card .placement-link:hover:not(:focus-visible) svg {
+.placement-last-card .placement-link:hover svg {
   transform: translateX(11px);
 }
 
@@ -753,9 +753,6 @@ body {
 .contacts-info {
   flex-direction: column;
   flex-basis: 375px;
-  /* justify-content: space-between;
-  width: 100%; */
-  /* margin-right: 52px; */
 }
 
 .contacts-block {
@@ -811,8 +808,8 @@ body {
   color: var(--color-hover);
 }
 
-.contacts-link:active {
-  color: var(--color-active)
+.contacts-link:active:not(:focus-visible) {
+  color: var(--color-active);
 }
 
 .contacts-grey {
@@ -892,7 +889,7 @@ body {
 }
 
 .footer-link:focus-visible {
-  outline: 0;
+  outline: none;
   outline-offset: 2px;
   outline: 1px solid var(--color-focus);
 }
@@ -901,8 +898,8 @@ body {
   color: var(--color-hover);
 }
 
-.footer-link:active {
-  color: var(--color-active)
+.footer-link:active:not(:focus-visible) {
+  color: var(--color-active);
 }
 
 .footer-social {
@@ -927,7 +924,7 @@ body {
   transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
 
-.footer-social-link:focus {
+.footer-social-link:focus-visible {
   outline: none;
 }
 
@@ -936,11 +933,11 @@ body {
   stroke: transparent;
 }
 
-.footer-social-link:active {
-  outline: none;
-}
-
-.footer-social-link:active svg {
+.footer-social-link:active:not(:focus-visible) svg {
   fill: var(--color-active);
   stroke: transparent;
+}
+
+.footer-social-link:active:not(:focus-visible) {
+  outline: none;
 }
